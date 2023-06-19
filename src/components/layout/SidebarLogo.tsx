@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { LuCandy } from "react-icons/lu";
 
 const SidebarLogo = () => {

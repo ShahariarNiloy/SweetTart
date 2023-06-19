@@ -8,11 +8,10 @@ import { Toaster } from "react-hot-toast";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <SessionProvider session={pageProps.session}>
+    <SessionProvider session={pageProps?.session}>
       <Toaster />
       <RegisterModal />
       <LoginModal />
-      {/* <EditModal /> */}
       <Layout>
         <Component {...pageProps} />
       </Layout>
