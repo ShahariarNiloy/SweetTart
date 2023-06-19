@@ -61,7 +61,7 @@ const LoginModal = () => {
   const footerContent = (
     <div className="text-neutral-400 text-center mt-4">
       <p>
-        First time using Sweetter?
+        First time using TwitTart?
         <span
           onClick={onToggle}
           className="

@@ -61,7 +61,7 @@ const SidebarTweetButton = () => {
             text-[20px]
         "
         >
-          Sweet
+          Tweet
         </p>
       </div>
     </div>
