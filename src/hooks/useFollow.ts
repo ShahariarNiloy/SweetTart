@@ -20,14 +20,15 @@ const useFollow = (userId: string) => {
 
   const toggleFollow = useCallback(async () => {
     if (!currentUser) {
-      return loginModal.onOpen();
+      loginModal.onOpen();
+      return;
     }
 
     try {
       let request;
 
       if (isFollowing) {
-        request = () => axios.delete("/api/follow", { data: { userId } });
+        request = () => axios.delete(`/api/follow/${userId}`);
       } else {
         request = () => axios.post("/api/follow", { userId });
       }
