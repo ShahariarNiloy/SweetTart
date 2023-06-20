@@ -20,12 +20,17 @@ const LoginModal = () => {
     try {
       setIsLoading(true);
 
-      await signIn("credentials", {
+      const res = await signIn("credentials", {
         email,
         password,
+        redirect: false,
       });
 
-      toast.success("Logged in");
+      if (res?.ok) {
+        toast.success("Logged in");
+      } else {
+        toast.error(res?.error as string);
+      }
 
       loginModal.onClose();
     } catch (error) {

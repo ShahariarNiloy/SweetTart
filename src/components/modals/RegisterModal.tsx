@@ -47,6 +47,7 @@ const RegisterModal = () => {
       signIn("credentials", {
         email,
         password,
+        redirect: false,
       });
 
       registerModal.onClose();
